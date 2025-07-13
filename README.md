@@ -22,10 +22,26 @@ Canva + [Coming Soon: GitHub Pages or Netlify]
 - CSS3
 - Custom Styling based on Canva layout
 
-## 📸 Images:
-- Profile photo
-- Social media icons
-- Project thumbnails
+## 📸 Portfolio Website Screenshots
+
+### 🏠 Home Section
+![Home](screenshots/Home.png)
+
+### 👤 About Section
+![About](screenshots/About.png)
+
+### 📞 Contact Section
+![Contact](screenshots/Contact.png)
+
+### 📁 Projects Section
+![Projects](screenshots/Projects.png)
+
+### 📃 Resume Section
+![Resume](screenshots/Resume.png)
+
+### 💼 Skills Section
+![Skills](screenshots/Skills.png)
+
 
 ## 🔗 Social Links:
 - [LinkedIn](https://www.linkedin.com/in/nadeer-ansari)
