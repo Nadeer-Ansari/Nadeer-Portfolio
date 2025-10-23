@@ -331,7 +331,7 @@ const Projects = () => {
       title: "Online Fraud Detection System",
       description: "Machine learning-based system to detect and prevent online fraudulent activities using pattern recognition and anomaly detection algorithms.",
       technologies: ["HTML, CSS, JSP" , "Java Servlets", "MySQL", "Apache Tomcat"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Fraud-Detection-System",
+      githubUrl: "https://github.com/Nadeer-Ansari/Online-Modeling-of-Proactive-Moderation",
       demoUrl: "#",
       image: "/online.jpg"
     },
@@ -339,7 +339,7 @@ const Projects = () => {
       title: "Node.js Authentication System",
       description: "A secure authentication system built with Node.js featuring user registration, login, and session management with password encryption.",
       technologies: ["Node.js", "MongoDB", "Docker" , "AWS ECR" , "Docker Compose"],
-      githubUrl: "https://github.com/Nadeer-Ansari/node-authentication",
+      githubUrl: "https://github.com/Nadeer-Ansari/Cloud-Native-Node-Mongo-App",
       demoUrl: "#",
       image: "/node.png"
     },
@@ -347,7 +347,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Modern responsive portfolio website built with React and Tailwind CSS showcasing projects and skills with smooth animations.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-      githubUrl: "https://github.com/Nadeer-Ansari/nadeer-portfolio",
+      githubUrl: "https://github.com/Nadeer-Ansari/Nadeer-Portfolio",
       demoUrl: "#",
       image: "/portfolio.png"
     }
