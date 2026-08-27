@@ -191,11 +191,11 @@ const Hero = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-slate-300 mb-8">
-            <span className="typing-animation">Software Engineer | DevOps & Web Developer </span>
+            <span className="typing-animation">Java Backend Developer | Software Engineer</span>
           </div>
           
           <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Building automated, scalable systems with Docker, Kubernetes & CI/CD. Passionate about bridging development and operations for reliable, secure infrastructure.
+            C-DAC PGCP-AC graduate focused on Java, Spring Boot, REST APIs and secure backend systems—supported by full-stack and DevOps experience.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -238,14 +238,12 @@ const About = () => {
                 <div className="bg-slate-800 rounded-2xl p-8 h-full">
                   <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
                   <p className="text-slate-300 leading-relaxed">
-                    I'm a passionate Software Engineer specializing in DevOps and full-stack development. 
-                    I build automated, scalable infrastructure using Docker, Kubernetes, and CI/CD pipelines 
-                    to bridge development and operations.
+                    I'm a Java Backend Developer and Software Engineer specializing in Spring Boot, REST APIs,
+                    databases and secure authentication, with hands-on full-stack development experience.
                   </p>
                   <p className="text-slate-300 leading-relaxed mt-4">
-                    Passionate about creating secure systems that solve real-world problems, from blockchain 
-                    voting platforms to fraud detection systems. Constantly exploring cloud-native technologies 
-                    and infrastructure automation.
+                    As a Computer Engineering and C-DAC PGCP-AC graduate, I enjoy building dependable software
+                    that solves real problems and taking it from clean code through containerized deployment.
                   </p>
                   
                   {/* Download Resume Button */}
@@ -320,36 +318,28 @@ const About = () => {
 const Projects = () => {
   const projects = [
     {
-      title: "TrustChain - Blockchain Voting",
-      description: "A secure blockchain-based voting system ensuring data integrity and transparency in electoral processes using distributed ledger technology.",
-      technologies: ["Blockchain", "Ganache", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/Nadeer-Ansari/TrustChain",
+      title: "Smart Society Connect",
+      description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
+      technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
       demoUrl: "#",
-      image: "/trustchain.png"
+      image: "/smart-society.png"
     },
     {
-      title: "Online Fraud Detection System",
-      description: "Machine learning-based system to detect and prevent online fraudulent activities using pattern recognition and anomaly detection algorithms.",
-      technologies: ["HTML, CSS, JSP" , "Java Servlets", "MySQL", "Apache Tomcat"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Online-Modeling-of-Proactive-Moderation",
-      demoUrl: "#",
-      image: "/online.jpg"
+      title: "CineScope",
+      description: "A responsive TMDB-powered movie discovery app with real-time search, movie categories, cast details and persistent themes.",
+      technologies: ["React", "Redux Toolkit", "Bootstrap", "TMDB API"],
+      githubUrl: "https://github.com/Nadeer-Ansari/CineScope",
+      demoUrl: "https://cinescope-pro.vercel.app/",
+      image: "/cinescope.png"
     },
     {
-      title: "Node.js Authentication System",
-      description: "A secure authentication system built with Node.js featuring user registration, login, and session management with password encryption.",
-      technologies: ["Node.js", "MongoDB", "Docker" , "AWS ECR" , "Docker Compose"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Cloud-Native-Node-Mongo-App",
-      demoUrl: "#",
-      image: "/node.png"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern responsive portfolio website built with React and Tailwind CSS showcasing projects and skills with smooth animations.",
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Nadeer-Portfolio",
-      demoUrl: "#",
-      image: "/portfolio.png"
+      title: "Node.js CRUD API",
+      description: "A modern user management dashboard backed by RESTful CRUD operations, MongoDB persistence, validation and analytics.",
+      technologies: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
+      demoUrl: "https://smart-crud-dashboard.onrender.com",
+      image: "/node-crud.png"
     }
   ]
 
@@ -380,6 +370,19 @@ const Experience = () => {
         </h2>
         
         <div className="max-w-4xl mx-auto space-y-8">
+          <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+            <div className="flex items-start gap-6">
+              <div className="bg-primary-500/20 p-4 rounded-xl text-3xl" aria-hidden="true">🎓</div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-2">Post Graduate Certificate Programme in Advanced Computing</h3>
+                <p className="text-primary-400 text-lg mb-2">Centre for Development of Advanced Computing (C-DAC)</p>
+                <p className="text-slate-300 mb-2">MET Institute of Information Technology, Nashik</p>
+                <div className="flex items-center text-slate-300 text-sm flex-wrap gap-4">
+                  <span>2026 · Completed</span><span>PGCP-AC</span>
+                </div>
+              </div>
+            </div>
+          </div>
           {/* Cyber Security Internship */}
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <div className="flex items-start gap-6">
@@ -550,6 +553,9 @@ const Education = () => {
 const Skills = () => {
   const skills = [
     { name: "Java", icon: "☕", level: 85 },
+    { name: "Spring Boot", icon: "🍃", level: 82 },
+    { name: "React", icon: "⚛️", level: 84 },
+    { name: "Node.js", icon: "🟢", level: 82 },
     { name: "Python", icon: "🐍", level: 90 },
     { name: "Docker", icon: "🐳", level: 80 },
     { name: "Jenkins", icon: "⚙️", level: 78 },
@@ -675,8 +681,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
               <p className="text-slate-300 mb-8 leading-relaxed">
-              "I'm actively seeking full-time opportunities in Software Engineering and DevOps roles,
-              passionate about building robust, automated systems and scalable infrastructure."
+              "I'm actively seeking Java Backend Developer and Software Engineer opportunities,
+              building reliable APIs, secure services and scalable applications."
               </p>
               
           <div className="space-y-4">
