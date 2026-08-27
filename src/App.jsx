@@ -349,6 +349,15 @@ const Projects = () => {
       image: "/cinescope.png"
     },
     {
+      title: "Node.js CRUD API",
+      date: "May 2026",
+      description: "A modern user management dashboard backed by RESTful CRUD operations, MongoDB persistence, validation and analytics.",
+      technologies: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
+      demoUrl: "https://smart-crud-dashboard.onrender.com",
+      image: "/node-crud.png"
+    },
+    {
       title: "Smart Society Connect",
       date: "2026 · Academic Capstone",
       description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
@@ -374,14 +383,6 @@ const Projects = () => {
       githubUrl: "https://github.com/Nadeer-Ansari/Trustchain",
       demoUrl: "#",
       image: "/trustchain.png"
-    },
-    {
-      title: "Node.js CRUD API",
-      description: "A modern user management dashboard backed by RESTful CRUD operations, MongoDB persistence, validation and analytics.",
-      technologies: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
-      demoUrl: "https://smart-crud-dashboard.onrender.com",
-      image: "/node-crud.png"
     },
     {
       title: "Online Fraud Detection System",
