@@ -340,6 +340,15 @@ const About = () => {
 const Projects = () => {
   const projects = [
     {
+      title: "Smart Society Connect",
+      date: "2026 · Academic Capstone",
+      description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
+      technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
+      demoUrl: "#",
+      image: "/smart-society.png"
+    },
+    {
       title: "CineScope",
       date: "Apr – May 2026",
       description: "A responsive TMDB-powered movie discovery app with real-time search, movie categories, cast details and persistent themes.",
@@ -356,15 +365,6 @@ const Projects = () => {
       githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
       demoUrl: "https://smart-crud-dashboard.onrender.com",
       image: "/node-crud.png"
-    },
-    {
-      title: "Smart Society Connect",
-      date: "2026 · Academic Capstone",
-      description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
-      technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
-      demoUrl: "#",
-      image: "/smart-society.png"
     },
     {
       title: "Cloud-Native Node & Mongo App",
@@ -391,14 +391,6 @@ const Projects = () => {
       githubUrl: "https://github.com/Nadeer-Ansari/Online-Modeling-of-Proactive-Moderation",
       demoUrl: "#",
       image: "/online.jpg"
-    },
-    {
-      title: "Portfolio Website",
-      description: "The responsive React portfolio you are viewing, designed to present my projects, qualifications and technical experience.",
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Nadeer-Portfolio",
-      demoUrl: "https://nadeer-ansari.netlify.app/",
-      image: "/portfolio.png"
     }
   ]
 
