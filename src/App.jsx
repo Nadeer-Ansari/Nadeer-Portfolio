@@ -340,12 +340,48 @@ const About = () => {
 const Projects = () => {
   const projects = [
     {
+      title: "CineScope",
+      date: "Apr – May 2026",
+      description: "A responsive TMDB-powered movie discovery app with real-time search, movie categories, cast details and persistent themes.",
+      technologies: ["React", "Redux Toolkit", "Bootstrap", "TMDB API"],
+      githubUrl: "https://github.com/Nadeer-Ansari/CineScope",
+      demoUrl: "https://cinescope-pro.vercel.app/",
+      image: "/cinescope.png"
+    },
+    {
+      title: "Smart Society Connect",
+      date: "2026 · Academic Capstone",
+      description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
+      technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
+      demoUrl: "#",
+      image: "/smart-society.png"
+    },
+    {
+      title: "Cloud-Native Node & Mongo App",
+      date: "Aug – Sep 2025",
+      description: "A containerized Node.js and MongoDB backend application demonstrating a practical DevOps workflow from local development to AWS ECR.",
+      technologies: ["Node.js", "MongoDB", "Docker", "AWS ECR"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Cloud-Native-Node-Mongo-App",
+      demoUrl: "#",
+      image: "/node.png"
+    },
+    {
       title: "TrustChain - Blockchain Voting",
+      date: "Nov 2024 – May 2025",
       description: "A secure blockchain-based voting system that uses distributed ledger technology to improve transparency and electoral data integrity.",
       technologies: ["Blockchain", "Ganache", "Node.js", "MongoDB"],
       githubUrl: "https://github.com/Nadeer-Ansari/Trustchain",
       demoUrl: "#",
       image: "/trustchain.png"
+    },
+    {
+      title: "Node.js CRUD API",
+      description: "A modern user management dashboard backed by RESTful CRUD operations, MongoDB persistence, validation and analytics.",
+      technologies: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
+      demoUrl: "https://smart-crud-dashboard.onrender.com",
+      image: "/node-crud.png"
     },
     {
       title: "Online Fraud Detection System",
@@ -356,44 +392,12 @@ const Projects = () => {
       image: "/online.jpg"
     },
     {
-      title: "Cloud-Native Node & Mongo App",
-      description: "A containerized Node.js and MongoDB backend application demonstrating a practical DevOps workflow from local development to AWS ECR.",
-      technologies: ["Node.js", "MongoDB", "Docker", "AWS ECR"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Cloud-Native-Node-Mongo-App",
-      demoUrl: "#",
-      image: "/node.png"
-    },
-    {
       title: "Portfolio Website",
       description: "The responsive React portfolio you are viewing, designed to present my projects, qualifications and technical experience.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
       githubUrl: "https://github.com/Nadeer-Ansari/Nadeer-Portfolio",
       demoUrl: "https://nadeer-ansari.netlify.app/",
       image: "/portfolio.png"
-    },
-    {
-      title: "Smart Society Connect",
-      description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
-      technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
-      demoUrl: "#",
-      image: "/smart-society.png"
-    },
-    {
-      title: "CineScope",
-      description: "A responsive TMDB-powered movie discovery app with real-time search, movie categories, cast details and persistent themes.",
-      technologies: ["React", "Redux Toolkit", "Bootstrap", "TMDB API"],
-      githubUrl: "https://github.com/Nadeer-Ansari/CineScope",
-      demoUrl: "https://cinescope-pro.vercel.app/",
-      image: "/cinescope.png"
-    },
-    {
-      title: "Node.js CRUD API",
-      description: "A modern user management dashboard backed by RESTful CRUD operations, MongoDB persistence, validation and analytics.",
-      technologies: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
-      githubUrl: "https://github.com/Nadeer-Ansari/Nodejs-CRUD-API",
-      demoUrl: "https://smart-crud-dashboard.onrender.com",
-      image: "/node-crud.png"
     }
   ]
 
@@ -663,6 +667,9 @@ const ProjectCard = ({ project }) => (
     </div>
     
     <div className="p-6">
+      {project.date && (
+        <p className="project-date">{project.date}</p>
+      )}
       <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
       <p className="text-slate-300 mb-4 leading-relaxed">{project.description}</p>
       
