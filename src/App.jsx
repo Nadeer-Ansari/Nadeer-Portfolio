@@ -2,9 +2,17 @@ import React, { useState } from 'react'
 import './index.css'
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark')
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(nextTheme)
+    localStorage.setItem('portfolio-theme', nextTheme)
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Layout>
+    <div className={`portfolio-theme theme-${theme} min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`}>
+      <Layout theme={theme} toggleTheme={toggleTheme}>
         <Sections />
       </Layout>
     </div>
@@ -12,7 +20,7 @@ function App() {
 }
 
 // Layout Component
-const Layout = ({ children }) => {
+const Layout = ({ children, theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
@@ -50,6 +58,16 @@ const Layout = ({ children }) => {
               ))}
             </div>
 
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle hidden md:inline-flex"
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+            >
+              <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
+              {theme === 'dark' ? 'Light' : 'Dark'}
+            </button>
+
             {/* Mobile Menu Button */}
             <button
               className="md:hidden text-slate-300"
@@ -75,6 +93,10 @@ const Layout = ({ children }) => {
                     {item.name}
                   </a>
                 ))}
+                <button onClick={toggleTheme} className="theme-toggle self-start">
+                  <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
+                  {theme === 'dark' ? 'Light theme' : 'Dark theme'}
+                </button>
               </div>
             </div>
           )}
@@ -318,6 +340,38 @@ const About = () => {
 const Projects = () => {
   const projects = [
     {
+      title: "TrustChain - Blockchain Voting",
+      description: "A secure blockchain-based voting system that uses distributed ledger technology to improve transparency and electoral data integrity.",
+      technologies: ["Blockchain", "Ganache", "Node.js", "MongoDB"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Trustchain",
+      demoUrl: "#",
+      image: "/trustchain.png"
+    },
+    {
+      title: "Online Fraud Detection System",
+      description: "A Java-based proactive moderation and fraud detection system using pattern analysis to identify suspicious online activity.",
+      technologies: ["Java Servlets", "JSP", "MySQL", "Apache Tomcat"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Online-Modeling-of-Proactive-Moderation",
+      demoUrl: "#",
+      image: "/online.jpg"
+    },
+    {
+      title: "Cloud-Native Node & Mongo App",
+      description: "A containerized Node.js and MongoDB backend application demonstrating a practical DevOps workflow from local development to AWS ECR.",
+      technologies: ["Node.js", "MongoDB", "Docker", "AWS ECR"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Cloud-Native-Node-Mongo-App",
+      demoUrl: "#",
+      image: "/node.png"
+    },
+    {
+      title: "Portfolio Website",
+      description: "The responsive React portfolio you are viewing, designed to present my projects, qualifications and technical experience.",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+      githubUrl: "https://github.com/Nadeer-Ansari/Nadeer-Portfolio",
+      demoUrl: "https://nadeer-ansari.netlify.app/",
+      image: "/portfolio.png"
+    },
+    {
       title: "Smart Society Connect",
       description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
       technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
@@ -370,19 +424,6 @@ const Experience = () => {
         </h2>
         
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-            <div className="flex items-start gap-6">
-              <div className="bg-primary-500/20 p-4 rounded-xl text-3xl" aria-hidden="true">🎓</div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-2">Post Graduate Certificate Programme in Advanced Computing</h3>
-                <p className="text-primary-400 text-lg mb-2">Centre for Development of Advanced Computing (C-DAC)</p>
-                <p className="text-slate-300 mb-2">MET Institute of Information Technology, Nashik</p>
-                <div className="flex items-center text-slate-300 text-sm flex-wrap gap-4">
-                  <span>2026 · Completed</span><span>PGCP-AC</span>
-                </div>
-              </div>
-            </div>
-          </div>
           {/* Cyber Security Internship */}
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <div className="flex items-start gap-6">
@@ -471,6 +512,19 @@ const Education = () => {
         </h2>
         
         <div className="max-w-4xl mx-auto space-y-8">
+          <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+            <div className="flex items-start gap-6">
+              <div className="bg-primary-500/20 p-4 rounded-xl text-3xl" aria-hidden="true">🎓</div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-2">Post Graduate Certificate Programme in Advanced Computing</h3>
+                <p className="text-primary-400 text-lg mb-2">Centre for Development of Advanced Computing (C-DAC)</p>
+                <p className="text-slate-300 mb-2">MET Institute of Information Technology, Nashik</p>
+                <div className="flex items-center text-slate-300 text-sm flex-wrap gap-4">
+                  <span>2026 · Completed</span><span>PGCP-AC</span>
+                </div>
+              </div>
+            </div>
+          </div>
           {/* BE Education */}
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <div className="flex items-start gap-6">
@@ -552,20 +606,22 @@ const Education = () => {
 // Tech Stack Section
 const Skills = () => {
   const skills = [
-    { name: "Java", icon: "☕", level: 85 },
-    { name: "Spring Boot", icon: "🍃", level: 82 },
+    { name: "Java", icon: "☕", level: 90 },
+    { name: "Spring Boot", icon: "🍃", level: 86 },
+    { name: "REST APIs", icon: "🔗", level: 88 },
+    { name: "Spring Security", icon: "🛡️", level: 80 },
+    { name: "MySQL", icon: "🐬", level: 86 },
+    { name: "MongoDB", icon: "🍃", level: 80 },
     { name: "React", icon: "⚛️", level: 84 },
     { name: "Node.js", icon: "🟢", level: 82 },
-    { name: "Python", icon: "🐍", level: 90 },
-    { name: "Docker", icon: "🐳", level: 80 },
-    { name: "Jenkins", icon: "⚙️", level: 78 },
-    { name: "Linux", icon: "🐧", level: 85 },
-    { name: "Git", icon: "📝", level: 90 },
-    { name: "GitHub", icon: "🐙", level: 88 },
-    { name: "MySQL", icon: "🐬", level: 80 },
-    { name: "HTML", icon: "🌐", level: 95 },
-    { name: "CSS", icon: "🎨", level: 90 },
-    { name: "Cybersecurity", icon: "🔒", level: 75 }
+    { name: "JavaScript", icon: "JS", level: 86 },
+    { name: "Docker", icon: "🐳", level: 82 },
+    { name: "Jenkins / CI/CD", icon: "⚙️", level: 78 },
+    { name: "Git & GitHub", icon: "🐙", level: 90 },
+    { name: "Linux", icon: "🐧", level: 84 },
+    { name: "Bootstrap", icon: "B", level: 84 },
+    { name: "Tailwind CSS", icon: "🎨", level: 82 },
+    { name: "Maven", icon: "M", level: 80 }
   ]
 
   return (
