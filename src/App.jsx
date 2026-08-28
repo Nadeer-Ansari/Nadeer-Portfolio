@@ -354,7 +354,7 @@ const AIModels = () => {
       eyebrow: 'Custom GPT · Placement Preparation',
       description: 'A beginner-friendly learning assistant that explains aptitude concepts, provides adaptive practice, evaluates mistakes and helps improve accuracy and speed.',
       capabilities: ['Adaptive practice', 'Mistake analysis', 'Step-by-step learning'],
-      url: 'https://lnkd.in/dF3hjdB6',
+      url: 'https://chatgpt.com/g/g-6a7aa9a59c888191969f170b2ef00c30-ai-quantitative-aptitude-mentor-by-nadeer-ansari',
       icon: '∑'
     },
     {
@@ -362,7 +362,7 @@ const AIModels = () => {
       eyebrow: 'Custom GPT · Career Communication',
       description: 'A personalized assistant for students and job seekers to strengthen English communication, grammar, confidence and professional interview responses.',
       capabilities: ['Interview practice', 'Grammar feedback', 'Confidence building'],
-      url: 'https://lnkd.in/dFeFwCsg',
+      url: 'https://chatgpt.com/g/g-6a7edfaae13c8191bd0f77201fc86da4-ai-interview-communication-mentor-by-nadeer-ansari',
       icon: 'AI'
     }
   ]
