@@ -451,6 +451,7 @@ const Projects = () => {
     },
     {
       title: "Online Fraud Detection System",
+      date: "Jan 2021 – Jul 2021",
       description: "A Java-based proactive moderation and fraud detection system using pattern analysis to identify suspicious online activity.",
       technologies: ["Java Servlets", "JSP", "MySQL", "Apache Tomcat"],
       githubUrl: "https://github.com/Nadeer-Ansari/Online-Modeling-of-Proactive-Moderation",
