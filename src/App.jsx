@@ -205,7 +205,7 @@ const Hero = () => {
           <div className="animate-float mb-8">
             <div className="w-32 h-32 mx-auto bg-gradient-to-r from-primary-500 to-purple-600 rounded-full flex items-center justify-center overflow-hidden border-4 border-white/20">
               <img 
-                src="/nadeer.png" 
+                src="/nadeer-hero.png"
                 alt="Nadeer Ansari" 
                 className="w-full h-full object-cover"
               />
