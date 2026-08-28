@@ -591,12 +591,7 @@ const Education = () => {
           {/* BE Education */}
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <div className="flex items-start gap-6">
-              <div className="bg-primary-500/20 p-4 rounded-xl">
-                <svg className="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                </svg>
-              </div>
+              <div className="bg-primary-500/20 p-4 rounded-xl text-3xl" aria-hidden="true">🏛️</div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Engineering in Computer Engineering</h3>
                 <p className="text-primary-400 text-lg mb-2">Gokhale Education Society's R. H. Sapat College of Engineering</p>
@@ -628,12 +623,7 @@ const Education = () => {
           {/* Diploma Education */}
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <div className="flex items-start gap-6">
-              <div className="bg-primary-500/20 p-4 rounded-xl">
-                <svg className="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                </svg>
-              </div>
+              <div className="bg-primary-500/20 p-4 rounded-xl text-3xl" aria-hidden="true">📜</div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">Diploma in Computer Engineering</h3>
                 <p className="text-primary-400 text-lg mb-2">KVN Naik SPS' Loknete Gopinathji Munde Institute of Engineering Education & Research</p>
