@@ -26,6 +26,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'AI Models', href: '#ai-models' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
@@ -46,7 +47,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden lg:flex space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -60,7 +61,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
 
             <button
               onClick={toggleTheme}
-              className="theme-toggle hidden md:inline-flex"
+              className="theme-toggle hidden lg:inline-flex"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
               title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
             >
@@ -70,7 +71,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-slate-300"
+              className="lg:hidden text-slate-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle navigation"
               aria-expanded={isMenuOpen}
@@ -83,7 +84,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4">
+            <div className="lg:hidden mt-4 pb-4">
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => (
                   <a
@@ -185,6 +186,7 @@ const Sections = () => {
     <>
       <Hero />
       <About />
+      <AIModels />
       <Projects />
       <Experience />
       <Education />
@@ -221,6 +223,12 @@ const Hero = () => {
           <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             C-DAC PGCP-AC graduate focused on Java, Spring Boot, REST APIs and secure backend systems—supported by full-stack and DevOps experience.
           </p>
+
+          <div className="recruiter-signals" aria-label="Professional highlights">
+            <span>Open to work</span>
+            <span>Java & Spring Boot</span>
+            <span>Full-stack delivery</span>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -332,6 +340,61 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Custom GPT Models Section
+const AIModels = () => {
+  const models = [
+    {
+      title: 'AI Quantitative Aptitude Mentor',
+      eyebrow: 'Custom GPT · Placement Preparation',
+      description: 'A beginner-friendly learning assistant that explains aptitude concepts, provides adaptive practice, evaluates mistakes and helps improve accuracy and speed.',
+      capabilities: ['Adaptive practice', 'Mistake analysis', 'Step-by-step learning'],
+      url: 'https://lnkd.in/dF3hjdB6',
+      icon: '∑'
+    },
+    {
+      title: 'AI Interview Communication Mentor',
+      eyebrow: 'Custom GPT · Career Communication',
+      description: 'A personalized assistant for students and job seekers to strengthen English communication, grammar, confidence and professional interview responses.',
+      capabilities: ['Interview practice', 'Grammar feedback', 'Confidence building'],
+      url: 'https://lnkd.in/dFeFwCsg',
+      icon: 'AI'
+    }
+  ]
+
+  return (
+    <section id="ai-models" className="py-20 bg-slate-800/50">
+      <div className="container mx-auto px-6">
+        <div className="section-intro max-w-3xl mx-auto text-center">
+          <p className="section-kicker">Generative AI work</p>
+          <h2 className="text-4xl font-bold text-white">
+            Custom <span className="text-primary-400">GPT Models</span>
+          </h2>
+          <p className="text-slate-400">
+            Practical, user-focused AI assistants created during my Generative AI & Intelligent Application Development certification.
+          </p>
+        </div>
+
+        <div className="ai-model-grid max-w-6xl mx-auto">
+          {models.map((model) => (
+            <article className="ai-model-card" key={model.title}>
+              <div className="ai-model-icon" aria-hidden="true">{model.icon}</div>
+              <p className="ai-model-eyebrow">{model.eyebrow}</p>
+              <h3>{model.title}</h3>
+              <p className="ai-model-description">{model.description}</p>
+              <ul aria-label={`${model.title} capabilities`}>
+                {model.capabilities.map((capability) => <li key={capability}>{capability}</li>)}
+              </ul>
+              <a href={model.url} target="_blank" rel="noopener noreferrer" className="ai-model-link">
+                Try this GPT <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
         </div>
       </div>
     </section>
