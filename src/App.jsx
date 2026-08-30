@@ -19,6 +19,22 @@ function App() {
   )
 }
 
+const ThemeToggle = ({ theme, toggleTheme, className = '' }) => (
+  <button
+    type="button"
+    onClick={toggleTheme}
+    className={`theme-toggle ${theme === 'dark' ? 'is-dark' : 'is-light'} ${className}`}
+    aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+    title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+  >
+    <span className="theme-toggle-track" aria-hidden="true">
+      <span className="theme-toggle-icon theme-toggle-sun">☀</span>
+      <span className="theme-toggle-icon theme-toggle-moon">☾</span>
+      <span className="theme-toggle-thumb" />
+    </span>
+  </button>
+)
+
 // Layout Component
 const Layout = ({ children, theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -59,15 +75,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
               ))}
             </div>
 
-            <button
-              onClick={toggleTheme}
-              className="theme-toggle hidden lg:inline-flex"
-              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-            >
-              <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
-              {theme === 'dark' ? 'Light' : 'Dark'}
-            </button>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} className="hidden lg:inline-flex" />
 
             {/* Mobile Menu Button */}
             <button
@@ -96,10 +104,7 @@ const Layout = ({ children, theme, toggleTheme }) => {
                     {item.name}
                   </a>
                 ))}
-                <button onClick={toggleTheme} className="theme-toggle self-start">
-                  <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
-                  {theme === 'dark' ? 'Light theme' : 'Dark theme'}
-                </button>
+                <ThemeToggle theme={theme} toggleTheme={toggleTheme} className="self-start" />
               </div>
             </div>
           )}
