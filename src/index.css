@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -333,6 +333,157 @@ footer { background: #050b15 !important; border-color: var(--border) !important;
 
 * { transition-property: color, background-color, border-color; transition-duration: .2s; }
 
+/* Backend Signal redesign — distinct developer-focused visual system */
+:root { font-family: 'Manrope', system-ui, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Manrope', system-ui, sans-serif; }
+
+.portfolio-theme {
+  --page: #050b14;
+  --page-soft: #09121f;
+  --surface: #0c1726;
+  --surface-raised: #111f31;
+  --surface-glass: rgba(5, 11, 20, .88);
+  --text: #f5f9ff;
+  --text-soft: #c8d5e5;
+  --text-muted: #7f93aa;
+  --border: rgba(91, 132, 166, .2);
+  --accent: #2dd4bf;
+  --accent-strong: #0f9f95;
+  --accent-2: #38bdf8;
+  --accent-soft: rgba(45, 212, 191, .1);
+  background:
+    linear-gradient(rgba(56,189,248,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,.025) 1px, transparent 1px),
+    radial-gradient(circle at 78% 3%, rgba(45,212,191,.1), transparent 28%),
+    var(--page) !important;
+  background-size: 42px 42px, 42px 42px, auto, auto !important;
+}
+
+.portfolio-theme header .text-2xl,
+#home .typing-animation,
+#home a.rounded-lg,
+.recruiter-signals span,
+.project-date,
+.ai-model-eyebrow,
+.ai-model-link {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.portfolio-theme .hover\:bg-primary-600:hover { background-color: #087f78 !important; }
+#home::before { background: radial-gradient(circle, rgba(45,212,191,.11), transparent 68%); }
+#home h1 { font-weight: 800; line-height: .94; }
+#home h1 span {
+  color: transparent !important;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#home .animate-float > div {
+  border-color: rgba(45,212,191,.42);
+  border-radius: .5rem;
+  clip-path: polygon(11% 0, 100% 0, 100% 89%, 89% 100%, 0 100%, 0 11%);
+  box-shadow: none;
+}
+#home .animate-float img { filter: saturate(.78) contrast(1.07); }
+#home .typing-animation { color: var(--accent); font-size: 1.08rem; }
+#home a.rounded-lg { border-radius: .35rem; letter-spacing: .09em; font-size: .74rem; }
+.recruiter-signals span { border-radius: .3rem; font-size: .68rem; }
+
+main section:nth-of-type(even) { background: rgba(8,19,33,.72) !important; }
+main section h2::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.portfolio-theme .rounded-2xl,
+#projects .grid > div,
+.ai-model-card { border-radius: .55rem; }
+#about .rounded-2xl,
+#experience .rounded-2xl,
+#education .rounded-2xl,
+#skills .rounded-2xl {
+  background: linear-gradient(145deg, rgba(17,31,49,.96), rgba(8,18,31,.96)) !important;
+}
+
+#projects .grid { counter-reset: project-card; }
+#projects .grid > div { counter-increment: project-card; }
+#projects .grid > div::before {
+  content: '0' counter(project-card);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  padding: .3rem .48rem;
+  border: 1px solid rgba(45,212,191,.34);
+  border-radius: .25rem;
+  background: rgba(5,11,20,.82);
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .66rem;
+  font-weight: 600;
+}
+#projects .grid > div:hover { border-color: rgba(45,212,191,.44) !important; }
+#projects .bg-primary-500\/20 { border-color: rgba(45,212,191,.18); }
+.project-date { border-color: rgba(45,212,191,.28); border-radius: .25rem; color: var(--accent); }
+
+.ai-model-card:hover { border-color: rgba(45,212,191,.42); }
+.ai-model-icon { border-color: rgba(45,212,191,.3); border-radius: .35rem; font-family: 'JetBrains Mono', monospace; }
+
+#experience .max-w-4xl,
+#education .max-w-4xl { position: relative; }
+#experience .max-w-4xl::before,
+#education .max-w-4xl::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: -1.6rem;
+  width: 1px;
+  background: linear-gradient(var(--accent), rgba(56,189,248,.15));
+}
+
+.theme-light {
+  --page: #f5f9fc;
+  --page-soft: #eaf1f6;
+  --surface: #ffffff;
+  --surface-raised: #edf5f8;
+  --surface-glass: rgba(245,249,252,.91);
+  --text: #071522;
+  --text-soft: #294357;
+  --text-muted: #607b91;
+  --border: rgba(7,54,79,.13);
+  --accent: #087f78;
+  --accent-strong: #0f9f95;
+  --accent-2: #0369a1;
+  --accent-soft: rgba(15,159,149,.08);
+  background:
+    linear-gradient(rgba(3,105,161,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3,105,161,.035) 1px, transparent 1px),
+    radial-gradient(circle at 80% 4%, rgba(15,159,149,.08), transparent 28%),
+    #f5f9fc !important;
+  background-size: 42px 42px, 42px 42px, auto, auto !important;
+}
+.theme-light .project-date { color: #087f78; }
+
+::-webkit-scrollbar-track { background: #050b14; }
+::-webkit-scrollbar-thumb:hover { background: #0f9f95; }
+
+@supports (animation-timeline: view()) {
+  main section:not(#home) > .container {
+    animation: section-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 28%;
+  }
+  @keyframes section-rise {
+    from { opacity: 0; transform: translateY(26px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
 @media (max-width: 767px) {
   html, body, #root, .portfolio-theme { width: 100%; max-width: 100%; overflow-x: hidden; }
   main section:not(#home) { padding-top: 5rem !important; padding-bottom: 5rem !important; }
@@ -350,7 +501,7 @@ footer { background: #050b15 !important; border-color: var(--border) !important;
   }
   #home h1 { order: 2; width: 100%; font-size: clamp(2.75rem, 14vw, 3.5rem); line-height: 1; margin-bottom: 1.25rem; }
   #home .animate-float { order: 1; width: 9rem; height: 11rem; margin: 0 auto 2rem; flex: 0 0 auto; }
-  #home .animate-float > div { border-radius: 999px; box-shadow: none; }
+  #home .animate-float > div { border-radius: 999px; clip-path: inset(0 round 999px); box-shadow: none; }
   #home .typing-animation { order: 3; width: 100%; font-size: 1.05rem; }
   #home .max-w-2xl { order: 4; width: 100%; margin: 1.25rem auto 2rem; font-size: 1rem; line-height: 1.7; }
   .recruiter-signals { order: 5; width: 100%; justify-content: center; margin-bottom: 1.6rem; }
@@ -369,6 +520,8 @@ footer { background: #050b15 !important; border-color: var(--border) !important;
   #education .flex.items-start { flex-direction: column; gap: 1rem; }
   #experience .p-8,
   #education .p-8 { padding: 1.35rem; }
+  #experience .max-w-4xl::before,
+  #education .max-w-4xl::before { display: none; }
   #experience .text-sm,
   #education .text-sm { align-items: flex-start; gap: .65rem; }
   #experience h3,
