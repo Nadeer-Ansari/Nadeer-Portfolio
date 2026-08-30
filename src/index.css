@@ -524,6 +524,11 @@ main section h2::after {
 
 @media (max-width: 767px) {
   html, body, #root, .portfolio-theme { width: 100%; max-width: 100%; overflow-x: hidden; }
+  main section:not(#home) > .container {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
   main section:not(#home) { padding-top: 5rem !important; padding-bottom: 5rem !important; }
   .portfolio-theme header nav { padding-left: 1.15rem; padding-right: 1.15rem; }
   .portfolio-theme header .text-2xl { font-size: 1.25rem; }
