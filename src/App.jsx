@@ -606,7 +606,7 @@ const Education = () => {
                 <p className="text-primary-400 text-lg mb-2">Centre for Development of Advanced Computing (C-DAC)</p>
                 <p className="text-slate-300 mb-2">MET Institute of Information Technology, Nashik</p>
                 <div className="flex items-center text-slate-300 text-sm flex-wrap gap-4">
-                  <span>2026 · Completed</span><span>PGCP-AC</span>
+                  <span>2026 · Completed</span><span>PGCP-AC</span><span>75%</span>
                 </div>
               </div>
             </div>
