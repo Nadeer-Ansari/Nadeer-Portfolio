@@ -410,6 +410,24 @@ const AIModels = () => {
 const Projects = () => {
   const projects = [
     {
+      title: "Ansari Prep",
+      date: "2026 · Current Project",
+      description: "A modern developer interview preparation platform covering DSA, programming, core CS, aptitude, coding practice, company resources and AI-powered learning tools.",
+      technologies: ["React", "Bootstrap", "JavaScript", "AI Tools"],
+      githubUrl: "https://github.com/Nadeer-Ansari/AnsariPrep",
+      demoUrl: "https://ansari-prep.vercel.app",
+      image: "/ansari-prep.png"
+    },
+    {
+      title: "N.A. University Admission Management System",
+      date: "2026 · Current Project",
+      description: "A role-based university admission platform with dedicated Student, Faculty, Accounts and Admin portals for managing the complete admission workflow.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "ASP.NET Core"],
+      githubUrl: "https://github.com/Nadeer-Ansari/University-Admission-Management-System",
+      demoUrl: "https://uni-admission-portall.ai.studio",
+      image: "/university-admission.png"
+    },
+    {
       title: "Smart Society Connect",
       date: "2026 · Academic Capstone",
       description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
