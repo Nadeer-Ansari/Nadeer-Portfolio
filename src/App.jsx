@@ -433,7 +433,7 @@ const Projects = () => {
       description: "A full-stack residential society platform with secure role-based workflows for residents, administrators, security and accountants.",
       technologies: ["React", "Spring Boot", "MySQL", "JWT", "Docker"],
       githubUrl: "https://github.com/Nadeer-Ansari/Smart-Society-Connect",
-      demoUrl: "#",
+      demoUrl: "https://smart-society-connect-frontend.onrender.com/",
       image: "/smart-society.png"
     },
     {
@@ -771,6 +771,8 @@ const ProjectCard = ({ project }) => (
         <a 
           href={project.demoUrl}
           className="flex items-center text-slate-300 hover:text-white transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
