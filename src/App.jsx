@@ -415,7 +415,7 @@ const Projects = () => {
       description: "A modern developer interview preparation platform covering DSA, programming, core CS, aptitude, coding practice, company resources and AI-powered learning tools.",
       technologies: ["React", "Bootstrap", "JavaScript", "AI Tools"],
       githubUrl: "https://github.com/Nadeer-Ansari/AnsariPrep",
-      demoUrl: "https://ansari-prep.vercel.app",
+      demoUrl: "https://ansariprep.vercel.app/",
       image: "/ansari-prep.png"
     },
     {
@@ -424,7 +424,7 @@ const Projects = () => {
       description: "A role-based university admission platform with dedicated Student, Faculty, Accounts and Admin portals for managing the complete admission workflow.",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "ASP.NET Core"],
       githubUrl: "https://github.com/Nadeer-Ansari/University-Admission-Management-System",
-      demoUrl: "https://uni-admission-portall.ai.studio",
+      demoUrl: "https://uni-admission-portall.ai.studio/",
       image: "/university-admission.png"
     },
     {
